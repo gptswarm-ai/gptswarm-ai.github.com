@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPTSwarm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/gptswarm.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f7e2b8, #a6885d);
+            color: #fff;
+            padding-top: 70px;
+        }
+        .navbar, .back-to-top {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+        .navbar .navbar-text.gptswarm-logo {
+            font-family: 'Nabla', cursive;
+            font-size: 24px;
+        }
+        .container, .gray-container {
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .team-member {
+            text-align: center;
+            margin-top: 5%;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .team-member h4, .team-member p {
+            margin-top: 10px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0);
+                opacity: 0;
+            }
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        .animated {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-fixed-top" style="background-image: linear-gradient(to left, #ffd700, #f0b419, #c0842c, #8c6239, #5e4223);">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-text gptswarm-logo" style="font-size: 30px;">
+                <img src="images/gptswarm.png" alt="Logo" style="height: 50px; width: auto; margin-top: -10px;"> GPTSwarm
+            </span>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about" class="navbar-link">About</a></li>
+                <li><a href="#team" class="navbar-link">Team</a></li>
+                <li><a href="#reference" class="navbar-link">Reference</a></li>
+                <li><a href="#contact" class="navbar-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+    
+<section class="container" id="about">
+    <h2>About GPTSwarm</h2>
+    <p class="intro-text">
+        Various human-designed prompt engineering techniques have been proposed to improve problem solvers based on Large Language Models (LLMs), yielding many disparate code bases. We unify these approaches by describing LLM-based agents as computational graphs. Each node implements a function to process multimodal data or query other LLMs. Each edge describes the information flow between operations and agents. Graphs can be recursively combined into larger composite graphs representing hierarchies of inter-agent collaboration. Our novel automatic graph optimizers (1) refine node-level LLM prompts (node optimization) and (2) improve agent orchestration by changing graph connectivity (edge optimization). Experiments demonstrate that our framework can be used to efficiently develop, integrate, and automatically improve diverse LLM agents.
+    </p>
+    <figure class="image-container">
+        <img src="images/gptswarm_first.pdf" alt="An introduction to GPTSwarm, showcasing its core principles and objectives.">
+    </figure>
+    <div class="buttons-container" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <a href="https://github.com/metauto-ai/gptswarm" target="_blank" class="about-icon-button" style="background-color: #FFD700; color: #000; padding: 10px 40px; text-decoration: none; border-radius: 5px; display: inline-block; min-width: 120px;">
+            View on GitHub
+        </a>
+        <a href="https://your_paper_link" target="_blank" class="about-icon-button" style="background-color: #FFD700; color: #000; padding: 10px 40px; text-decoration: none; border-radius: 5px; display: inline-block; min-width: 120px;">
+            Read the Paper
+        </a>
+    </div>
+</section>
+    
+    
+<div class="container" id="team">
+    <h2 style="text-align: center; margin-bottom: 20px;">Our Team</h2>
+    <div class="row">
+      
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="https://metauto.ai" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/mingchen.jpeg" alt="Mingchen Zhuge" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Mingchen Zhuge</h4>
+                <p style="margin-bottom: 2px;"><small>PhD Student, <em>KAUST</em></small></p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="https://scholar.google.com/citations?user=79ODhuQAAAAJ&hl=en" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/wenyi.jpeg" alt="Wenyi Wang" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Wenyi Wang</h4>
+                <p style="margin-bottom: 2px;"><small>PhD Student, <em>KAUST</em></small></p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="http://louiskirsch.com" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/kirsch.jpeg" alt="Louis Kirsch" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Louis Kirsch</h4>
+                <p style="margin-bottom: 2px;"><small>PhD Student, <em>IDSIA</em></small></p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="https://scholar.google.com/citations?user=0z3DkrkAAAAJ&hl=en&oi=ao" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/faccio.jpeg" alt="Francesco Faccio" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Francesco Faccio</h4>
+                <p style="margin-bottom: 2px;"><small>PostDoc, <em>IDSIA</em></small></p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="http://khizbullin.tech" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/dmitrii.jpg" alt="Dmitrii Khizbullin" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Dmitrii Khizbullin</h4>
+                <p style="margin-bottom: 2px;"><small>Reseach Engineer Lead, <em>KAUST</em></small></p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3" style="padding: 5px;">
+            <a href="https://people.idsia.ch/~juergen/" style="text-decoration: none; color: inherit;">
+            <div class="team-member-card" style="background-color: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); padding: 15px; transition: all 0.3s ease-in-out;">
+                <img src="images/juergen.jpeg" alt="Jürgen Schmidhuber" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <h4 style="margin-bottom: 2px;">Jürgen Schmidhuber</h4>
+                <p style="margin-bottom: 2px;"><small>Director, <em>KAUST and IDSIA</em></small></p>
+            </div>
+        </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Add a simple jQuery script for hover effect
+    $(document).ready(function(){
+        $('.team-member-card').hover(
+            function(){ $(this).css('box-shadow', '0 6px 12px rgba(0, 0, 0, 0.15)'); },
+            function(){ $(this).css('box-shadow', '0 3px 6px rgba(0, 0, 0, 0.1)'); }
+        );
+    });
+    </script>
+
+<div id="reference" style="font-family: Arial, sans-serif;">
+    <div class="container">
+        <h2>Reference</h2>
+        <div style="position: relative; background-color: #f8f9fa; padding: 5px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <button onclick="copyToClipboard()" style="position: absolute; top: 20px; right: 20px; cursor: pointer; background-color: #ff9100; color: white; border: none; border-radius: 5px; padding: 5px 10px; font-size: 16px;">Copy</button>
+            <pre style="background-color: transparent; border: none; font-family: 'Courier New', monospace; margin: 0px; margin-bottom: 0px; padding: 10px; padding-top: 0px; padding-bottom: 0px; overflow-x: auto; font-size: 12px;">
+<code id="copyText" style="white-space: pre-wrap; font-size: 14px;">
+
+@article{zhuge2024gptswarm,
+    title={Language Agents as Optimizable Graphs},
+    author={Zhuge, Mingchen and Wang, Wenyi and Kirsch, Louis and Faccio, Francesco and Khizbulin, Dmitrii and Schmidhuber, Juergen},
+    journal={Technical Report},
+    year={2024}
+}
+</code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+
+<section class="container" id="contact" style="background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; margin-bottom: 30px; font-weight: bold; color: #5e4223;">Contact Us</h2>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <p style="font-size: 18px; margin-bottom: 15px;">
+                <strong>Offical Email:</strong> 
+                <a href="mailto:gptswarm@gmail.com" style="color: #337ab7; text-decoration: none;">gptswarm@gmail.com</a>
+            </p>
+            <p style="font-size: 18px; margin-bottom: 15px;">
+                <strong>Personal Email:</strong> 
+                <a href="mailto:mingchen.zhuge@kaust.edu.sa" style="color: #337ab7; text-decoration: none;">mingchen.zhuge@kaust.edu.sa</a>, 
+                <a href="mailto:wenyi.wang@kaust.edu.sa" style="color: #337ab7; text-decoration: none;">wenyi.wang@kaust.edu.sa</a>, 
+                <a href="mailto:dmitrii.khizbullin@kaust.edu.sa" style="color: #337ab7; text-decoration: none;">dmitrii.khizbullin@kaust.edu.sa</a>,
+                <a href="mailto:francesco.faccio@kaust.edu.sa" style="color: #337ab7; text-decoration: none;">francesco.faccio@kaust.edu.sa</a>,
+                <a href="mailto:mail@louiskirsch.com" style="color: #337ab7; text-decoration: none;">mail@louiskirsch.com</a>
+            </p>
+            <p style="font-size: 18px; margin-bottom: 15px;"><strong>Address:</strong> KAUST AI Initiative (Building 12, 3rd floor), KAUST, Thuwal, KSA</p>
+            <p style="font-size: 18px;">We look forward to hearing from you!</p>
+        </div>
+    </div>
+</section>
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    function copyToClipboard() {
+        var textToCopy = document.getElementById("copyText");
+        var textArea = document.createElement("textarea");
+        textArea.value = textToCopy.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        textArea.remove();
+        alert("Content copied to clipboard!");
+    }
+
+    $(document).ready(function(){
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if(target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+
+        $('.back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
